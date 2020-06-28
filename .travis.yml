@@ -10,7 +10,7 @@ services: docker
 env:
   global:
     - DOCKER_OPTS="--rm -ti -v $(pwd):/mnt -w /mnt"
-      DOCKER_CNTR="rcpp/run"
+      DOCKER_CNTR="rcpp/plus"
       R_BLD_OPTS="--no-build-vignettes --no-manual"
       R_CHK_OPTS="--no-vignettes --no-manual"
       PKG_NAME=$(awk '/Package:/ {print $2}' DESCRIPTION)
